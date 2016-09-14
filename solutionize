@@ -1,0 +1,80 @@
+#!/usr/bin/env node
+
+/*
+ * Verify existing solutions in the corresponding workshopper
+ * ==========================================================
+ * CAVEATS:
+ * - File names must be in the same order as the workshopper section
+ * - Make sure to put glob patterns in quotes so that the shell
+ *   does not evaluate the file path before `glob` has a chance to expand it.
+ */
+
+var fs = require('fs');
+var exec = require('child_process').exec;
+
+var glob = require('glob');
+var workshopper = process.argv[2] || handleError('Error:  No workshopper specified');
+var path = process.argv[3] || handleError('Error: No files were specified');
+var sections = [];
+var i = 0;
+
+function handleError (msg) {
+    console.log(msg);
+    process.exit(1);
+}
+
+// Reset completed list so that each solution matches the appropriate section
+function resetTutorial (cb) {
+	var cmd =  workshopper + ' reset';
+	exec(cmd, function (err, stdout, stderr) {
+		if (err) handleError(err);
+		else if (stderr) handleError(stderr);
+		console.log('Reseting ' + workshopper);
+		cb();
+	});
+}
+
+function getSections (cb) {
+	return function () {
+		var cmd =  workshopper + ' list';
+		exec(cmd, function (err, stdout, stderr) {
+			if (err) handleError(err);
+			else if (stderr) handleError(stderr);
+
+			sections = stdout.split('\n');
+			console.log('Recording ' + workshopper + ' sections');
+			cb();
+		});
+	};
+}
+
+function nextSection (files, i, cb) {
+	cmd = workshopper + ' select "' + sections[i] + '"';
+	exec(cmd, function (err, stdout, stderr) {
+		if (err) handleError(err);
+		else if (stderr) handleError(stderr);
+		cb(files, i);
+	});
+}
+
+function verifySolution (files, i) {
+	var cmd = workshopper + ' verify ' + files[i];
+	console.log('Verifying ' + files[i] + ' at section ' + (i + 1) + ': ' + sections[i]);
+	exec(cmd, function (err, stdout, stderr) {
+		if (err) handleError(err);
+		else if (stderr) handleError(stderr);
+		console.log(stdout);
+		i++;
+		if (i < files.length ) {
+			nextSection(files, i, verifySolution);
+		}
+	});
+
+}
+
+resetTutorial(getSections(function () {
+	glob(path, function (err, files) {
+		if (err) handleError(err);
+		nextSection(files, i, verifySolution);
+	});
+}));
