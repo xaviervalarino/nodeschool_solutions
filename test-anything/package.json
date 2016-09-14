@@ -1,0 +1,11 @@
+{
+  "name": "test-anything",
+  "description": "NodeSchool's 'test-anything' workshop",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tape": "^4.4.0"
+  },
+  "author": "Xavier Valarino",
+  private: true
+}
