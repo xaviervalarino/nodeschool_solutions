@@ -1,7 +1,12 @@
 var fs = require('fs');
 var path = require('path');
 
-module.exports = function (dir, ext, callback) {
+var dir = process.argv[2];
+var ext = process.argv[3];
+
+
+
+function filter(dir, ext, callback) {
 
   fs.readdir(dir, function (err, data) {
     if (err) {
@@ -14,4 +19,13 @@ module.exports = function (dir, ext, callback) {
     callback(null, result);
   });
 
-};
+}
+
+filter(dir, ext, function(err, files){
+  if ( err ) {
+    return console.log('There was an error:', err);
+  }
+  files.forEach(function (file){
+    console.log(file);
+  });
+});
