@@ -7,6 +7,7 @@
     "concat-stream": "^1.5.2",
     "duplexer": "^0.1.1",
     "duplexer2": "^0.1.4",
+    "level": "^1.4.0",
     "request": "^2.74.0",
     "split": "^1.0.0",
     "stream-combiner": "^0.2.2",
