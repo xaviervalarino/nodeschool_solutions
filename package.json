@@ -9,6 +9,7 @@
     "duplexer2": "^0.1.4",
     "level": "^1.4.0",
     "level-sublevel": "^6.6.1",
+    "multilevel": "^7.3.0",
     "request": "^2.74.0",
     "split": "^1.0.0",
     "stream-combiner": "^0.2.2",

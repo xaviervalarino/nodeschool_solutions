@@ -6,6 +6,7 @@ A collection of my solutions to various [Nodeschool workshoppers](http://nodesch
 - [X] test-anything @done (2016-03-03 )
 - [X] scope-chains-closures @done (2016-05-02)
 - [X] git-it @done (2016-09-08)
+- [X] levelmeup @done (2016-10-17)
 - [ ] learnyoureact
 - [ ] how-to-npm
 - [ ] how-to-markdown
@@ -20,6 +21,5 @@ A collection of my solutions to various [Nodeschool workshoppers](http://nodesch
 - [ ] introtowebgl
 - [ ] webgl-workshop
 - [ ] planetproto
-- [ ] levelmeup
 - [ ] elementary-electron
 - [ ] nodebot-workshop
