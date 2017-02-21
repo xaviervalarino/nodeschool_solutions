@@ -3,6 +3,9 @@
 /*
  * Verify existing solutions in the corresponding workshopper
  * ==========================================================
+ * USAGE:
+ * ./verify-solutions [workshop-name] [file(s)]
+ *
  * CAVEATS:
  * - File names must be in the same order as the workshopper section
  * - Make sure to put glob patterns in quotes so that the shell
