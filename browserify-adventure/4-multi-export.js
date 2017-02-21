@@ -1,4 +1,4 @@
-var ndjson = require('./ndjson.js');
+var ndjson = require('./modules/ndjson.js');
 var parse = ndjson.parse( prompt() );
 var serialize = ndjson.stringify( prompt() );
 
