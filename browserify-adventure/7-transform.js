@@ -1,9 +1,10 @@
 var fs = require('fs');
+var sprintf = require('sprintf-js').sprintf;
 
-var path ='/usr/lib/node_modules/browserify-adventure/problems/using_transforms/wake.txt';
-fs.readFile(path, function (err, data) {
-   if (err) throw err;
+var data = fs.readFileSync(__dirname + '/lib/wake.txt', 'utf8');
+data = data.split('\n').map(function (line, i) {
+   if (i % 5) i = ' ';
+   return sprintf('%3s %s', i, line);
+}).join('\n');
 
-   var count = 0;
-   console.log(count, data);
-});
+console.log(data);
