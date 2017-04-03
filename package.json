@@ -2,7 +2,10 @@
   "name": "nodeschool_solutions",
   "version": "0.0.0",
   "description": "A collection of my solutions to nodeschool workshoppers",
-  "main": " ",
+  "repository" : {
+    "type" : "git",
+     "url" : "https://github.com/xaviervalarino/nodeschool_solutions.git"
+  },
   "dependencies": {
     "brfs": "^1.4.3",
     "concat-stream": "^1.5.2",
