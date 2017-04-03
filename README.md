@@ -1,25 +1,29 @@
-#Nodeschool Solutions
+# Nodeschool Solutions
 A collection of my solutions to various [Nodeschool workshoppers](http://nodeschool.io/#workshoppers)
 
 ## Tutorials:
-- [X] learnyounode @done (2015-08-20)
-- [X] test-anything @done (2016-03-03 )
-- [X] scope-chains-closures @done (2016-05-02)
-- [X] git-it @done (2016-09-08)
-- [X] levelmeup @done (2016-10-17)
-- [ ] learnyoureact
+
+### Core:
 - [ ] how-to-npm
-- [ ] how-to-markdown
-- [ ] browserify-adventure
 - [ ] stream-adventure
+- [X] git-it @done (2016-09-08)
+- [X] learnyounode @done (2015-08-20)
+- [X] scope-chains-closures @done (2016-05-02)
+
+### Electives
+- [ ] async-you
+- [ ] browserify-adventure
+- [ ] bug-clinic
+- [ ] elementary-electron
 - [ ] expressworks
 - [ ] functional-javascript-workshop
-- [ ] bug-clinic
-- [ ] lololodash
-- [ ] async-you
-- [ ] learnyoucouchdb
+- [ ] how-to-markdown
 - [ ] introtowebgl
-- [ ] webgl-workshop
-- [ ] planetproto
-- [ ] elementary-electron
+- [ ] learnyoucouchdb
+- [ ] learnyoureact
+- [ ] lololodash
 - [ ] nodebot-workshop
+- [ ] planetproto
+- [ ] webgl-workshop
+- [X] levelmeup @done (2016-10-17)
+- [X] test-anything @done (2016-03-03 )
