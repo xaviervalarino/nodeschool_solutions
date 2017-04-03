@@ -31,6 +31,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "verify": "./verify-solutions"
   },
   "author": "Xavier Valarino <xvalarino@gmail.com>",
   "license": "ISC"
