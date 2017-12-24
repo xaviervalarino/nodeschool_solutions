@@ -5,7 +5,7 @@ A collection of my solutions to various [Nodeschool workshoppers](http://nodesch
 
 ### Core:
 - [ ] how-to-npm
-- [ ] stream-adventure
+- [X] stream-adventure @done (2017-12-24)
 - [X] git-it @done (2016-09-08)
 - [X] learnyounode @done (2015-08-20)
 - [X] scope-chains-closures @done (2016-05-02)
